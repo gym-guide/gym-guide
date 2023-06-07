@@ -13,7 +13,7 @@ if (APP_MOUNTING_ROOT == null) {
 ReactDOM.createRoot(APP_MOUNTING_ROOT).render(
   <React.StrictMode>
     <HashRouter>
-      <Provider store={store}>
+      <Provider store={undefined}>
         <App />
       </Provider>
     </HashRouter>
