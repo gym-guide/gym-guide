@@ -79,10 +79,6 @@ You should run listed commands in project root directory
 - `npm run build` - compiles project in front-end/build/
 
 ## for BACKEND
-//Please enter commands
-- `npm run dev:api` - start dev server for Backend;
-
-- `npm run lint:api` - run linter test in `back-end/` dir;
-- `npm run fix-style:api` - autofomat with prettier and autofix some lint issues
-- `npm run build:api` - compiles project in api/build/
-- `npm run start:api` - compiles project in api/build/ and starts it on your PC
+- `cd back-end` - go to `back-end/` dir;
+- `mvn clean package` - build project;
+- `java -jar target/Autoservice…. .jar` - run back-end app;
