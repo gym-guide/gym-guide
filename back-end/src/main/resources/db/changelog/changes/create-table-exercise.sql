@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS exercises
 (
     id bigint auto_increment,
     title varchar(255) not null,
-    description varchar(255) not null,
+    description varchar(600) not null,
     category varchar(255) not null,
     sub_category varchar(255) not null,
     image_path varchar(255) not null,

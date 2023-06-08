@@ -7,4 +7,7 @@ public interface ExerciseService {
     Exercise save(Exercise exercise);
     Exercise getById(Long exerciseId);
     List<Exercise> getAll();
+    List<Exercise> getAllByCategory(String category);
+    List<Exercise> getAllBySubCategory(String subCategory);
+    Exercise findByTitle(String title);
 }
