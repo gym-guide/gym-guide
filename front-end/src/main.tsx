@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import store from './app/store.ts';
 
 const APP_MOUNTING_ROOT = document.getElementById('root');
 
@@ -13,7 +14,7 @@ if (APP_MOUNTING_ROOT == null) {
 ReactDOM.createRoot(APP_MOUNTING_ROOT).render(
   <React.StrictMode>
     <HashRouter>
-      <Provider store={undefined}>
+      <Provider store={store}>
         <App />
       </Provider>
     </HashRouter>

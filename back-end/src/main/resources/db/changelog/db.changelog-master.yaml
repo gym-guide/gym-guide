@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - include:
+        file: /db/changelog/changes/create-table-exercise.sql
+  - include:
+      file: /db/changelog/changes/initial-exercise.sql
+
