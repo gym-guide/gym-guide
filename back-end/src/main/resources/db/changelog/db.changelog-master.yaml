@@ -2,5 +2,28 @@ databaseChangeLog:
   - include:
         file: /db/changelog/changes/create-table-exercise.sql
   - include:
-      file: /db/changelog/changes/initial-exercise.sql
-
+      file: /db/changelog/changes/front/initial-chest-exercises.sql
+  - include:
+      file: /db/changelog/changes/front/initial-abs-exercises.sql
+  - include:
+      file: /db/changelog/changes/back/initial-upper-back-exercises.sql
+  - include:
+      file: /db/changelog/changes/back/initial-middle-back-exercise.sql
+  - include:
+      file: /db/changelog/changes/back/initial-lower-back-exercises.sql
+  - include:
+      file: /db/changelog/changes/hands/initial-biceps-exercises.sql
+  - include:
+      file: /db/changelog/changes/hands/initial-triceps-exercises.sql
+  - include:
+      file: /db/changelog/changes/legs/initial-calves-exercises.sql
+  - include:
+      file: /db/changelog/changes/legs/initial-gluteus-exercises.sql
+  - include:
+      file: /db/changelog/changes/legs/initial-hamstrings-exercises.sql
+  - include:
+      file: /db/changelog/changes/legs/initial-quadriceps-exercises.sql
+  - include:
+      file: /db/changelog/changes/other/initial-neck-exercises.sql
+  - include:
+      file: /db/changelog/changes/other/initial-shoulders-exercises.sql
