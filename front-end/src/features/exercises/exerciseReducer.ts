@@ -11,7 +11,7 @@ const initialState: initialStateForExercises = {
 };
 
 export const exerciseSlice = createSlice({
-  name: 'exercises',
+  name: 'exercise',
   initialState,
   reducers: {
     reset: (state) => {

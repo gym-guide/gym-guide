@@ -9,10 +9,10 @@ export interface Exercise {
 }
 
 export interface initialStateForExercises {
-  exercisesData: Array<Exercise>,
-  exerciseData: Array<Exercise>,
-  loading: boolean,
-  success: boolean,
-  message: string,
-  error: boolean,
+  exercisesData: Array<Exercise>;
+  exerciseData: Array<Exercise>;
+  loading: boolean;
+  success: boolean;
+  message: string;
+  error: boolean;
 }
