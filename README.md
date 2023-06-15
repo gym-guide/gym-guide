@@ -81,4 +81,4 @@ You should run listed commands in project root directory
 ## for BACKEND
 - `cd back-end` - go to `back-end/` dir;
 - `mvn clean package` - build project;
-- `java -jar target/Autoservice…. .jar` - run back-end app;
+- `java -jar target/back-end-0.0.1-SNAPSHOT.jar` - run back-end app;

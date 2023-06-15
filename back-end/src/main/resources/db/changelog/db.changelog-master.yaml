@@ -1,6 +1,14 @@
 databaseChangeLog:
   - include:
-        file: /db/changelog/changes/create-table-exercise.sql
+      file: /db/changelog/changes/role/create-role-table.sql
+  - include:
+      file: /db/changelog/changes/user/create-table-users.sql
+  - include:
+      file: /db/changelog/changes/user/create-table-users-role.sql
+  - include:
+      file: /db/changelog/changes/role/initial-main-roles.sql
+  - include:
+      file: /db/changelog/changes/create-table-exercise.sql
   - include:
       file: /db/changelog/changes/front/initial-chest-exercises.sql
   - include:
