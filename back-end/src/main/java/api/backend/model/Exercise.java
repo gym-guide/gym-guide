@@ -45,7 +45,7 @@ public class Exercise {
 
     public enum SubCategory {
         CHEST("Chest"),
-        PRESS("Press"),
+        ABS("Abs"),
         UPPER_BACK("Upper_Back"),
         MIDDLE_BACK("Middle_Back"),
         LOWER_BACK("Lower_Back"),
@@ -53,7 +53,7 @@ public class Exercise {
         BICEPS("Biceps"),
         QUADRICEPS("Quadriceps"),
         HAMSTRINGS("Hamstrings"),
-        GLUTES("Glutes"),
+        GLUTEUS("Gluteus"),
         CALVES("Calves"),
         NECK("Neck"),
         SHOULDERS("Shoulders");
