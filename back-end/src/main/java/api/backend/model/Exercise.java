@@ -1,7 +1,6 @@
 package api.backend.model;
 
 import lombok.*;
-
 import javax.persistence.*;
 
 @AllArgsConstructor
