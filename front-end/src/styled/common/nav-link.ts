@@ -8,7 +8,26 @@ interface NavLink {
 }
 
 export const NavLink = styled(Link)<NavLink>`
-  text-decoration: none;
-  color: blue;
-  font-size: 15px;
+position: relative;
+color: black;
+font-size: 16;
+text-decoration: none;
+
+&::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 1.5px;
+  background-color: black;
+}
+
+&:hover::before {
+  width: 100%;
+}
+
+&::before {
+  transition: width 0.30s;
+}
 `;

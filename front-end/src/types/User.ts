@@ -1,7 +1,9 @@
 export interface User {
   id: number;
-  firstName: string | null;
-  secondName: string | null;
+  email: string | null;
+  username: string | null;
+  password: string;
+  role: string;
 }
 
 export interface initialStateForUser {
