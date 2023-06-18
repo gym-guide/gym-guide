@@ -11,7 +11,7 @@ type Props = {
 export const Input: FC<Props> = ({
   type = 'text',
   value = '',
-  text = 'email',
+  text = 'example@gmail.com',
   handleValue,
 }) => {
   return (

@@ -5,25 +5,8 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 28%;
-  padding: 10px;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  @media (max-width: 1100px) {
-    width: 60%;
-  }
-
-  @media (max-width: 800px) {
-    width: 80%;
-  }
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04)), #FFFFFF;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
 `;
