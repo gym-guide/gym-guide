@@ -43,11 +43,11 @@ export const Login: React.FC = (): JSX.Element => {
 
       navigate(`${Protected.ROOT_PATH}`);
     } catch (error) {
-      throw new Error(`${error}`);
+      throw new Error(`Error from login: ${error}`);
     }
   };
 
-  const handleSkip = (e: React.MouseEventHandler<HTMLButtonElement>) =>
+  const handleSkip = () =>
     navigate('/');
 
   const checkCredentials = useCheckCredentialsForAnamation(email, password);

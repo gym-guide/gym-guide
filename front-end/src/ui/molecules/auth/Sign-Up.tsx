@@ -40,7 +40,7 @@ export const SignUp = () => {
     try {
       await signUpUser(userName, email, password, repeatPassword);
     } catch (error) {
-      throw new Error(`error: ${error}`);
+      throw new Error(`ERRRROORRRRRRR: ${error}`);
     }
   };
 

@@ -6,10 +6,14 @@ export async function loginUser(
   email: string,
   password: string,
 ): Promise<User> {
-  const result = await axios.post('http://localhost:8080/login', {
-    email,
-    password,
-  });
+  try {
+    const result = await axios.post('http://localhost:8080/login', {
+      email,
+      password,
+    });
 
-  return result.data;
+    return result.data;
+  } catch (error) {
+    throw new Error(`${error}`);
+  }
 }
