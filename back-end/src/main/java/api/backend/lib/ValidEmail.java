@@ -4,8 +4,7 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.*;
 
-@Documented
-@Constraint(validatedBy = PasswordValidator.class)
+@Constraint(validatedBy = EmailValidator.class)
 @Target({ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ValidEmail {
