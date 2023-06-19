@@ -28,15 +28,15 @@ public class AuthenticationController {
     @PostMapping("/register")
     @ApiOperation(value = "registration new account for user")
     public UserResponseDto register(@RequestBody @Valid UserRegisterDto dto) {
-        User user = authenticationService.register(dto.getEmail(), dto.getUsername(),
-                dto.getPassword());
+        User user = authenticationService.register(dto.email(), dto.username(),
+                dto.password());
         return userMapper.toDto(user);
     }
 
     @PostMapping("/login")
     @ApiOperation(value = "login to account")
     public ResponseEntity<Object> login(@RequestBody @Valid UserLoginDto dto) {
-        User user = authenticationService.login(dto.getUsername(), dto.getPassword());
+        User user = authenticationService.login(dto.username(), dto.password());
         String token = provider.createToken(user.getUsername(), user.getRole().stream()
                 .map(r -> r.getRoleName().name())
                 .collect(Collectors.toList()));
