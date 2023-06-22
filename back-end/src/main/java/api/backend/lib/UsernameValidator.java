@@ -7,15 +7,22 @@ import javax.validation.ConstraintValidatorContext;
 
 @AllArgsConstructor
 public class UsernameValidator implements ConstraintValidator<ValidUsername, String> {
-    private static final String LOGIN_VALIDATION_REGEX = "^[A-Za-z]$";
     private final UserService accountService;
 
     @Override
-    public boolean isValid(String username, ConstraintValidatorContext constraintValidatorContext) {
+    public boolean isValid(String username, ConstraintValidatorContext context) {
         if (username == null) {
+            context.disableDefaultConstraintViolation();
+            context.buildConstraintViolationWithTemplate("Fill the username field.")
+                    .addConstraintViolation();
             return false;
         }
-        boolean checker = accountService.findByUsername(username).isEmpty();
-        return username.matches(LOGIN_VALIDATION_REGEX) && checker;
+        if (accountService.findByUsername(username).isPresent()) {
+            context.disableDefaultConstraintViolation();
+            context.buildConstraintViolationWithTemplate("This username is already taken.")
+                    .addConstraintViolation();
+            return false;
+        }
+        return true;
     }
 }
