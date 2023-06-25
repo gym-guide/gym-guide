@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const SidebarContainer = styled.div`
   display: flex;
+  grid-area: Sidebar;
   flex-direction: column;
   width: 400px;
   height: 100vh;
