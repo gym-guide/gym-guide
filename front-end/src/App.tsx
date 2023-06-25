@@ -12,22 +12,36 @@ import { SignUp } from './ui/molecules/auth/Sign-Up';
 
 function App() {
   const content = useRoutes([
-    {
-      path: `${Protected.ROOT_PATH}`,
-      element: <AuthGuard />,
-      children: [
-        {
-          path: 'messages',
-          element: <DefaultPage />,
-        },
-      ],
-    },
+    // {
+    //   path: `${CommonRoutes.MAIN}`,
+    //   element: <AuthGuard />,
+    //   children: [
+    //     {
+    //       path: `${CommonRoutes.MAIN}`,
+    //       element: <DefaultPage />,
+    //     },
+    //   ],
+    // },
 
     { path: `${CommonRoutes.LOG_IN}`,
       element: <Login /> },
 
     { path: `${CommonRoutes.SIGN_UP}`,
       element: <SignUp /> },
+
+    // { path: `${CommonRoutes.MAIN}`,
+    //   element: <DefaultPage /> },
+
+    {
+      path: `${CommonRoutes.MAIN}`,
+      element: <DefaultPage />,
+      children: [
+        {
+          path: `${CommonRoutes.MAIN}`,
+          element: <DefaultPage />,
+        },
+      ],
+    },
   ]);
 
   return content;
