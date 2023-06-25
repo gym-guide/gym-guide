@@ -48,7 +48,7 @@ export const Login: React.FC = (): JSX.Element => {
   };
 
   const handleSkip = () =>
-    navigate('/');
+    navigate('/main');
 
   const checkCredentials = useCheckCredentialsForAnamation(email, password);
 

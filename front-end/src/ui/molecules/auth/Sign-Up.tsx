@@ -45,7 +45,7 @@ export const SignUp = () => {
   };
 
   const handleSkip = () =>
-    navigate('/');
+    navigate('/main');
 
   const checkCredentials = useCheckCredentialsForAnamation(email, password);
 
