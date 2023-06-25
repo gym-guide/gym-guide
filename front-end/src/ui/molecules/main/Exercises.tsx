@@ -5,7 +5,6 @@ export const Exercises: React.FC = (): JSX.Element => {
     <ExerciseResultsContainer>
       <Title>Search results</Title>
       <CardContainer>
-        {/* Здесь можно добавить компоненты карточек упражнений */}
         <ExerciseCard>
           <ExerciseImage src="/" alt="Exercise 1" />
           <ExerciseTitle>Exercise 1</ExerciseTitle>
@@ -14,7 +13,6 @@ export const Exercises: React.FC = (): JSX.Element => {
           <ExerciseImage src="/" alt="Exercise 2" />
           <ExerciseTitle>Exercise 2</ExerciseTitle>
         </ExerciseCard>
-        {/* ... и так далее */}
       </CardContainer>
     </ExerciseResultsContainer>
   );
@@ -22,9 +20,10 @@ export const Exercises: React.FC = (): JSX.Element => {
 
 const ExerciseResultsContainer = styled.div`
   display: flex;
+  grid-area: Exercises;
   display: block;
   padding: 16px;
-  background-color: #f1f1f1;
+  background-color: #e3e3e3;
 `;
 
 const Title = styled.h2`
