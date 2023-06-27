@@ -9,5 +9,5 @@ public interface ExerciseService {
     List<Exercise> getAll();
     List<Exercise> getAllByCategory(String category);
     List<Exercise> getAllBySubCategory(String subCategory);
-    Exercise findByTitle(String title);
+    List<Exercise> findByTitle(String title);
 }
