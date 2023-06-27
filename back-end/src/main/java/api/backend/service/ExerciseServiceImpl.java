@@ -38,8 +38,7 @@ public class ExerciseServiceImpl implements ExerciseService {
     }
 
     @Override
-    public Exercise findByTitle(String title) {
-        return repository.findByTitle(title).orElseThrow(
-                () -> new RuntimeException("Can't find exercise by title: " + title));
+    public List<Exercise> findByTitle(String title) {
+        return repository.findAllByTitleContaining(title);
     }
 }

@@ -52,10 +52,10 @@ public class ExerciseController {
 
     @GetMapping("/title")
     @ApiOperation(value = "Getting all exercises by title")
-    public ExerciseResponsePreviewDto getByTitle(
+    public List<ExerciseResponsePreviewDto> getByTitle(
             @RequestParam("title")
             @ApiParam(value = "Title by which you want to find exercise")
             String title) {
-        return mapper.toPreviewDto(service.findByTitle(title));
+        return service.findByTitle(title).stream().map(mapper::toPreviewDto).toList();
     }
 }
