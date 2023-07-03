@@ -8,7 +8,6 @@ export const SidebarContainer = styled.div`
   height: 100vh;
   padding: 60px 40px;
   background-color: white;
-  border: 1px solid black;
 `;
 
 export const ButtonContainer = styled.div`
