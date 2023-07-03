@@ -1,18 +1,37 @@
 import styled from 'styled-components';
+import { ExerciseCard } from '../../../components/ExerciseCard';
+
+const mockData = [
+  {
+    id: 0,
+    title: 'Hulf Crunch',
+    // eslint-disable-next-line max-len
+    description: 'The "Half Crunch" exercise is a core strengthening exercise that targets the abdominal muscles. It is a modified version of the traditional crunch exercise, focusing on the upper portion of the abdominal muscles.',
+    category: 'FRONT',
+    sub_category: 'ABS',
+    image_path: 'back-end/src/main/resources/images/front/abs/Hulf Crunch.png',
+    gif_path: 'back-end/src/main/resources/gifs/front/abs/Hulf Crunch.gif',
+  },
+  {
+    id: 0,
+    title: 'Hulf Crunch',
+    // eslint-disable-next-line max-len
+    description: 'The "Half Crunch" exercise is a core strengthening exercise that targets the abdominal muscles. It is a modified version of the traditional crunch exercise, focusing on the upper portion of the abdominal muscles.',
+    category: 'FRONT',
+    sub_category: 'ABS',
+    image_path: 'back-end/src/main/resources/images/front/abs/Hulf Crunch.png',
+    gif_path: 'back-end/src/main/resources/gifs/front/abs/Hulf Crunch.gif',
+  },
+];
 
 export const Exercises: React.FC = (): JSX.Element => {
   return (
     <ExerciseResultsContainer>
       <Title>Search results</Title>
       <CardContainer>
-        <ExerciseCard>
-          <ExerciseImage src="/" alt="Exercise 1" />
-          <ExerciseTitle>Exercise 1</ExerciseTitle>
-        </ExerciseCard>
-        <ExerciseCard>
-          <ExerciseImage src="/" alt="Exercise 2" />
-          <ExerciseTitle>Exercise 2</ExerciseTitle>
-        </ExerciseCard>
+        {mockData.map(exercise => (
+          <ExerciseCard exercise={exercise} />
+        ))}
       </CardContainer>
     </ExerciseResultsContainer>
   );
@@ -37,7 +56,7 @@ const CardContainer = styled.div`
   gap: 16px;
 `;
 
-const ExerciseCard = styled.div`
+const ExerciseCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
